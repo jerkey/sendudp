@@ -1,4 +1,13 @@
-#include "sendudp.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <sys/socket.h>
+#include <arpa/inet.h> // inet_ntoa
+#include <netdb.h> // hostent
+
+#define MAX_BUF_LEN 1024
 /* * Global vars */
 int sockfd;
 unsigned int addrr_len = sizeof(struct sockaddr), numbytes;
